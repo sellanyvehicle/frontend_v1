@@ -99,7 +99,7 @@
 		<div class="wrap-contact100">
 			<form class="contact100-form validate-form">
 				<span class="contact100-form-title">
-					Four Wheel Vehicle
+					Four Wheeler 
 				</span>
 
 				<div class="wrap-input100 validate-input bg1" data-validate="Please Type Your Name">
@@ -124,14 +124,24 @@
                 
                 <div class="wrap-input100 validate-input bg1 rs1-wrap-input100" data-validate="Please Enter Type of Vehicle">
 					<span class="label-input100">Type of Vehicle to be Sold*</span>
-					<input class="input100" type="text" name="vehicleType" placeholder="Type of Vehicle" required>
+					<input class="input100" type="text" name="vehicleType" placeholder="Petrol/Diesel/CNG" required>
+                </div>
+
+                <div class="wrap-input100 validate-input bg1 rs1-wrap-input100" data-validate="Model">
+					<span class="label-input100">Model*</span>
+					<input class="input100" type="text" name="vehicleType" placeholder="Hyundai,Tata,Maruti...." required>
+                </div>
+
+                <div class="wrap-input100 validate-input bg1 rs1-wrap-input100" data-validate="Variant">
+					<span class="label-input100">Variant*</span>
+					<input class="input100" type="text" name="vehicleType" placeholder="Variant" required>
                 </div>
                 
                 <div class="wrap-input100 validate-input bg1 rs1-wrap-input100" data-validate="Please Enter City">
 					<span class="label-input100">City*</span>
 					<input class="input100" type="text" name="city" placeholder="City" required>
                 </div>
-                <div class="wrap-input100 validate-input bg1" data-validate="Owner">
+                <div class="wrap-input100 validate-input bg1 rs1-wrap-input100" data-validate="Owner">
 					<span class="label-input100">Onwer Name as on Rc*</span>
 					<input class="input100" type="text" name="owner" placeholder="Owner Name" required>
                 </div>
@@ -152,10 +162,7 @@
 					<input class="input100" type="text" name="brand" placeholder="Brand" required>
                 </div>
                 
-                <div class="wrap-input100 validate-input bg1 rs1-wrap-input100" data-validate="Running in">
-					<span class="label-input100">Running In*</span>
-					<input class="input100" type="text" name="running" placeholder="Running In" required>
-				</div>
+               
 
 				<div class="wrap-input100 input100-select bg1">
 					<span class="label-input100">Insurance Available *</span>
@@ -183,8 +190,23 @@
 						<div class="contact100-form-range-bar">
 							<div id="filter-bar"></div>
 						</div>
+                    </div>
+                    
+                    <div class="wrap-contact100-form-range">
+						<span class="label-input100">Running In *</span> 
+
+						<div class="contact100-form-range-value">
+							<span id="lower-mileage">0</span> - <span id="upper-mileage">100000 km</span>
+							<input type="text" name="lower-value">
+							<input type="text" name="upper-value">
+						</div>
+
+						<div >
+							<div id="filter-mileage"></div>
+						</div>
 					</div>
-				
+                
+                
 
 				<div class="wrap-input100 validate-input bg1 " data-validate = "Please Type Your Message">
 					<span class="label-input100">Message</span>
@@ -299,11 +321,35 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 	    });
     </script>
 
+<script>
+    var filterMileage = document.getElementById('filter-mileage');
+
+    noUiSlider.create(filterMileage, {
+        start: [ 1000, 30000 ],
+        connect: true,
+        range: {
+            'min': 10000,
+            'max': 100000
+        }
+    });
+
+    var skipValues2 = [
+    document.getElementById('lower-mileage'),
+    document.getElementById('upper-mileage')
+    ];
+
+    filterMileage.noUiSlider.on('update', function( values, handle ) {
+        skipValues2[handle].innerHTML = Math.round(values[handle]);
+        $('.contact100-form-range-value input[name="lower-value"]').val($('#lower-mileage').html());
+        $('.contact100-form-range-value input[name="upper-value"]').val($('#upper-mileage').html());
+    });
+</script>
+
     <script>
         const instance = new Datepicker(document.getElementById("datepicker"));
         instance.config({
-            first_date: new Date(2005, 0, 1), // 01/01/2019
-             last_date: new Date(2019, 11, 31) // 12/31/2019
+            first_date: new Date(2005, 0, 1), 
+             last_date: new Date(2020, 12, 31) // 12/31/2020
             });
     
     </script>
