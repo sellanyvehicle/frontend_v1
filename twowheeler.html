@@ -306,11 +306,8 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 	    });
 	</script>
 	<script>
-			$("button").click(function() {
-  var value = $(this).parent().parent().find("input").val();
-  $("#output").html(value + "<br>&lt;time datetime='" + value + "'>&lt;/time>");
-  console.log(value);
-});
+			var today = new Date();
+document.getElementById('dtText').innerHTML=today;
 	</script>
 
 <script>
