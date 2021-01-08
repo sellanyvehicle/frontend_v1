@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html lang="zxx">
+<html lang="en">
 <head>
-	<title>Sellany Vehicle</title>
+    <title>Sellany Vehicle</title>
 	<meta charset="UTF-8">
 	<meta name="description" content="Selling your vehicle in a click!">
 	<meta name="keywords" content="cars, scooters, vehicle, selling, enquiry, resell">
@@ -17,11 +17,17 @@
 	<link rel="stylesheet" href="css/bootstrap.min.css"/>
 	<link rel="stylesheet" href="css/font-awesome.min.css"/>
 	<link rel="stylesheet" href="css/owl.carousel.min.css"/>
-	<link rel="stylesheet" href="css/slicknav.min.css"/>
+    <link rel="stylesheet" href="css/slicknav.min.css"/>
+    
 
 	<!-- Main Stylesheets -->
 	<link rel="stylesheet" href="css/style.css"/>
 
+    <!-- Datepicker.css -->
+    <link rel="stylesheet" href="calendar/datepicker.css">
+
+    <!-- Datepicker.js -->
+    <script src="calendar/datepicker.js"></script>
 
 	<!--[if lt IE 9]>
 		<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
@@ -38,39 +44,175 @@
 	</script>
 
 
+	<title>Contact V5</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--===============================================================================================-->
+	<link rel="icon" type="image/png" href="images/icons/favicon.ico"/>
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="fonts/iconic/css/material-design-iconic-font.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/css-hamburgers/hamburgers.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/animsition/css/animsition.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/daterangepicker/daterangepicker.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/noui/nouislider.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="css/util.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+<!--===============================================================================================-->
 </head>
 <body>
-	<!-- Page Preloder -->
-	<div id="preloder">
-		<div class="loader"></div>
+<!-- Page Preloder -->
+<div id="preloder">
+    <div class="loader"></div>
+</div>
+
+<!-- Header section -->
+<header class="header-section clearfix">
+    <a href="index.html" class="site-logo">
+        <img src="img/logo.png" alt="" height="40%" width="40%">
+    </a>
+    <div class="header-right">
+        <a href="index.html">Home</a>
+        <span>|</span>
+        <div class="user-panel">
+            <!-- <a href="blog.html">Process</a> -->
+            <a href="contact.html">Contact</a>
+        </div> 
+    </div>
+</header>
+
+
+
+	<div class="container-contact100">
+		<div class="wrap-contact100">
+			<form class="contact100-form validate-form">
+				<span class="contact100-form-title">
+					Two Wheeler 
+				</span>
+
+				<div class="wrap-input100 validate-input bg1" data-validate="Please Type Your Name">
+					<span class="label-input100" >Full Name *</span>
+					<input class="input100" type="text" name="name" placeholder="Enter Your Name" required>
+				</div>
+
+				<div class="wrap-input100 validate-input bg1 rs1-wrap-input100" data-validate = "Enter Your Email (e@a.x)">
+					<span class="label-input100">Email *</span>
+					<input class="input100" type="text" name="email" placeholder="Enter Your Email ">
+				</div>
+
+				<div class="wrap-input100 bg1 rs1-wrap-input100">
+					<span class="label-input100">Phone Number*</span>
+					<input class="input100" type="text" name="phone" placeholder="Enter Number Phone" required>
+                </div>
+
+                <div class="wrap-input100 validate-input bg1" data-validate="Address">
+					<span class="label-input100" >Address</span>
+					<input class="input100" type="text" name="address" placeholder="Enter Your Address" >
+				</div>
+
+				<div class="wrap-input100 validate-input bg1 rs1-wrap-input100" data-validate="Please Enter City">
+					<span class="label-input100">City*</span>
+					<input class="input100" type="text" name="city" placeholder="City" required>
+                </div>
+                
+                <div class="wrap-input100 validate-input bg1 rs1-wrap-input100" data-validate="Please Enter Type of Vehicle">
+					<span class="label-input100">Type of Vehicle*</span>
+					<input class="input100" type="text" name="vehicleType" placeholder="Vehicle Type" required>
+				</div>
+			
+                
+               
+                <div class="wrap-input100 validate-input bg1 rs1-wrap-input100" data-validate="Owner">
+					<span class="label-input100">Onwer Name as on Rc*</span>
+					<input class="input100" type="text" name="ownerName" placeholder="Owner Name" required>
+                </div>
+
+                <div class="wrap-input100 validate-input bg1 rs1-wrap-input100">
+						Month/Year of Purchase*
+                <input type="text" id="datepicker" autocomplete="off" required></input>
+                </div>
+                     
+				<div class="wrap-input100 input100-select bg1">
+					<span class="label-input100">Insurance Available *</span>
+					<div>
+						<select class="js-select2" name="service" required>
+							<option>Please Choose</option>
+							<option>Yes</option>
+							<option>No</option>
+						</select>
+						<div class="dropDownSelect2"></div>
+					</div>
+				</div>
+
+				<!--addition of running in if contains options-->
+
+					<div class="wrap-contact100-form-range">
+						<span class="label-input100">Asking Price Rs*</span>
+
+						<div class="contact100-form-range-value">
+							Rs <span id="value-lower">0</span> - Rs <span id="value-upper">1000000</span>
+							<input type="text" name="from-value">
+							<input type="text" name="to-value">
+						</div>
+
+						<div class="contact100-form-range-bar">
+							<div id="filter-bar"></div>
+						</div>
+                    </div>
+                    
+                    <div class="wrap-contact100-form-range">
+						<span class="label-input100">Running Done km*</span> 
+
+						<div class="contact100-form-range-value">
+							<span id="lower-mileage">0 km</span> - <span id="upper-mileage">100000 km</span>
+							<input type="text" name="lower-value">
+							<input type="text" name="upper-value">
+						</div>
+
+						<div >
+							<div id="filter-mileage"></div>
+						</div>
+					</div>
+                
+                
+				<div class="wrap-input100 validate-input bg1 rs1-wrap-input100" data-validate="Timestamp">
+					<span class="label-input100">Time Stamp*  </span><br>
+					<input type="time" value="08:30" />
+					<input class="input100" type="text" name="timeStamp"  required>
+				</div>
+
+				<div class="wrap-input100 validate-input bg1 " data-validate = "Please Type Your Message">
+					<span class="label-input100">Message</span>
+					<textarea class="input100" name="message" placeholder="Your message here..."></textarea>
+				</div>
+            
+
+				<div class="container-contact100-form-btn">
+					<button class="contact100-form-btn">
+						<span>
+							Submit
+							<i class="fa fa-long-arrow-right m-l-7" aria-hidden="true"></i>
+						</span>
+					</button>
+                </div>
+            </div>
+			</form>
+		</div>
 	</div>
 
-	<!-- Header section -->
-	<header class="header-section clearfix">
-		<a href="index.html" class="site-logo">
-			<img src="img/logo.png" alt="" height="40%" width="40%">
-		</a>
-		<div class="header-right">
-			<a href="index.html">Home</a>
-			<span>|</span>
-			<div class="user-panel">
-				<!-- <a href="blog.html">Process</a> -->
-				<a href="contact.html">Contact</a>
-			</div> 
-		</div>
-	</header>
-	<!-- Header section end -->
-
-	<!-- Category section -->
-	<section class="category-section spad">
-		<div class="container-fluid">
-			<div class="typeform-widget" data-url="https://sagnik9.typeform.com/to/mhwCa9" data-transparency="50" data-hide-headers=true data-hide-footer=true style="width: 100%; height: 500px;"></div> <script> (function() { var qs,js,q,s,d=document, gi=d.getElementById, ce=d.createElement, gt=d.getElementsByTagName, id="typef_orm", b="https://embed.typeform.com/"; if(!gi.call(d,id)) { js=ce.call(d,"script"); js.id=id; js.src=b+"embed.js"; q=gt.call(d,"script")[0]; q.parentNode.insertBefore(js,q) } })() </script> <div style="font-family: Sans-Serif;font-size: 12px;color: #999;opacity: 0.5; padding-top: 5px;"> powered by <a href="https://admin.typeform.com/signup?utm_campaign=mhwCa9&utm_source=typeform.com-01D8JVRJB8V3BMBB0YC6VH8VRA-free&utm_medium=typeform&utm_content=typeform-embedded-poweredbytypeform&utm_term=EN" style="color: #999" target="_blank">Typeform</a> </div>
-		</div>
-	</section>
-	<!-- Category section end -->
-
-	<!-- Footer section -->
-	<footer class="footer-section">
+    <footer class="footer-section">
 		<div class="container">
 			<div class="row">
 				<div class="col-xl-6 col-lg-7 order-lg-2">
@@ -92,10 +234,7 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 			</div>
 		</div>
 	</footer>
-	<!-- Footer section end -->
-	
-	<!--====== Javascripts & Jquery ======-->
-	<script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/jquery-3.2.1.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>
 	<script src="js/jquery.slicknav.min.js"></script>
 	<script src="js/owl.carousel.min.js"></script>
@@ -106,5 +245,122 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 	<script src="js/jquery.jplayer.min.js"></script>
 	<script src="js/jplayerInit.js"></script>
 
-	</body>
+<!--===============================================================================================-->
+<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/animsition/js/animsition.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/bootstrap/js/popper.js"></script>
+	<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/select2/select2.min.js"></script>
+	<script>
+		$(".js-select2").each(function(){
+			$(this).select2({
+				minimumResultsForSearch: 20,
+				dropdownParent: $(this).next('.dropDownSelect2')
+			});
+
+
+			$(".js-select2").each(function(){
+				$(this).on('select2:close', function (e){
+					if($(this).val() == "Please chooses") {
+						$('.js-show-service').slideUp();
+					}
+					else {
+						$('.js-show-service').slideUp();
+						$('.js-show-service').slideDown();
+					}
+				});
+			});
+		})
+	</script>
+<!--===============================================================================================-->
+	<script src="vendor/daterangepicker/moment.min.js"></script>
+	<script src="vendor/daterangepicker/daterangepicker.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/countdowntime/countdowntime.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/noui/nouislider.min.js"></script>
+	<script>
+	    var filterBar = document.getElementById('filter-bar');
+
+	    noUiSlider.create(filterBar, {
+	        start: [ 10000, 390000 ],
+	        connect: true,
+	        range: {
+	            'min': 10000,
+	            'max': 1000000
+	        }
+	    });
+
+	    var skipValues = [
+	    document.getElementById('value-lower'),
+	    document.getElementById('value-upper')
+	    ];
+
+	    filterBar.noUiSlider.on('update', function( values, handle ) {
+	        skipValues[handle].innerHTML = Math.round(values[handle]);
+	        $('.contact100-form-range-value input[name="from-value"]').val($('#value-lower').html());
+	        $('.contact100-form-range-value input[name="to-value"]').val($('#value-upper').html());
+	    });
+	</script>
+	<script>
+			$("button").click(function() {
+  var value = $(this).parent().parent().find("input").val();
+  $("#output").html(value + "<br>&lt;time datetime='" + value + "'>&lt;/time>");
+  console.log(value);
+});
+	</script>
+
+<script>
+    var filterMileage = document.getElementById('filter-mileage');
+
+    noUiSlider.create(filterMileage, {
+        start: [ 1000, 30000 ],
+        connect: true,
+        range: {
+            'min': 10000,
+            'max': 100000
+        }
+    });
+
+    var skipValues2 = [
+    document.getElementById('lower-mileage'),
+    document.getElementById('upper-mileage')
+    ];
+
+    filterMileage.noUiSlider.on('update', function( values, handle ) {
+        skipValues2[handle].innerHTML = Math.round(values[handle]);
+        $('.contact100-form-range-value input[name="lower-value"]').val($('#lower-mileage').html());
+        $('.contact100-form-range-value input[name="upper-value"]').val($('#upper-mileage').html());
+    });
+</script>
+
+    <script>
+        const instance = new Datepicker(document.getElementById("datepicker"));
+        instance.config({
+            first_date: new Date(2005, 0, 1), 
+             last_date: new Date(2020, 12, 31) // 12/31/2020
+            });
+    
+    </script>
+    
+<!--===============================================================================================-->
+	<script src="js/fourwheeler.js"></script>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-23581568-13');
+  
+</script>
+
+
+
+</body>
 </html>
