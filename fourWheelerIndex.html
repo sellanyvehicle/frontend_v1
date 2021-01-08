@@ -202,7 +202,7 @@
                 
 				<div class="wrap-input100 validate-input bg1 rs1-wrap-input100" data-validate="Timestamp">
 					<span class="label-input100">Time Stamp*  </span><br>
-					<input type="time" value="08:30" />
+					<span id="dtText"></span>
 					<input class="input100" type="text" name="timeStamp"  required>
 				</div>
 
@@ -318,12 +318,11 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 	        $('.contact100-form-range-value input[name="to-value"]').val($('#value-upper').html());
 	    });
 	</script>
-	<script>
-			$("button").click(function() {
-  var value = $(this).parent().parent().find("input").val();
-  $("#output").html(value + "<br>&lt;time datetime='" + value + "'>&lt;/time>");
-  console.log(value);
-});
+
+		<script>
+			let today = new Date();
+			today = today.toTimeString();
+document.getElementById('dtText').innerHTML=today;
 	</script>
 
 <script>
@@ -349,6 +348,7 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
         $('.contact100-form-range-value input[name="upper-value"]').val($('#upper-mileage').html());
     });
 </script>
+
 
     <script>
         const instance = new Datepicker(document.getElementById("datepicker"));
