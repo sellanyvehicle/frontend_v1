@@ -113,7 +113,7 @@
 				</div>
 
 				<div class="wrap-input100 bg1 rs1-wrap-input100">
-					<span class="label-input100">Phone Number</span>
+					<span class="label-input100">Phone Number*</span>
 					<input class="input100" type="text" name="phone" placeholder="Enter Number Phone" required>
                 </div>
 
@@ -121,49 +121,42 @@
 					<span class="label-input100" >Address</span>
 					<input class="input100" type="text" name="address" placeholder="Enter Your Address" >
 				</div>
+
+				<div class="wrap-input100 validate-input bg1 rs1-wrap-input100" data-validate="Please Enter City">
+					<span class="label-input100">City*</span>
+					<input class="input100" type="text" name="city" placeholder="City" required>
+                </div>
                 
                 <div class="wrap-input100 validate-input bg1 rs1-wrap-input100" data-validate="Please Enter Type of Vehicle">
-					<span class="label-input100">Type of Vehicle to be Sold*</span>
+					<span class="label-input100">Type of Vehicle*</span>
 					<input class="input100" type="text" name="vehicleType" placeholder="Petrol/Diesel/CNG" required>
+				</div>
+				<div class="wrap-input100 validate-input bg1 rs1-wrap-input100" data-validate="Make">
+					<span class="label-input100">Make*</span>
+					<input class="input100" type="text" name="make" placeholder="Hyundai,Toyota....." required>
                 </div>
 
                 <div class="wrap-input100 validate-input bg1 rs1-wrap-input100" data-validate="Model">
 					<span class="label-input100">Model*</span>
-					<input class="input100" type="text" name="vehicleType" placeholder="Hyundai,Tata,Maruti...." required>
+					<input class="input100" type="text" name="model" placeholder="Baleno,i20,Creta,Swift....." required>
                 </div>
 
                 <div class="wrap-input100 validate-input bg1 rs1-wrap-input100" data-validate="Variant">
 					<span class="label-input100">Variant*</span>
-					<input class="input100" type="text" name="vehicleType" placeholder="Variant" required>
-                </div>
-                
-                <div class="wrap-input100 validate-input bg1 rs1-wrap-input100" data-validate="Please Enter City">
-					<span class="label-input100">City*</span>
-					<input class="input100" type="text" name="city" placeholder="City" required>
-                </div>
-                <div class="wrap-input100 validate-input bg1 rs1-wrap-input100" data-validate="Owner">
-					<span class="label-input100">Onwer Name as on Rc*</span>
-					<input class="input100" type="text" name="owner" placeholder="Owner Name" required>
-                </div>
-
-                <div class="wrap-input100 validate-input bg1 rs1-wrap-input100">
-                <input type="text" id="datepicker" autocomplete="off"></input>
-                </div>
-                
-
-                <div class="wrap-input100 validate-input bg1 rs1-wrap-input100" data-validate="Purchase Month">
-					<span class="label-input100">Month of Purchase</span>
-					<input class="input100" type="text" name="purchaseMonth" placeholder="Month of Purchase" >
-                </div>
-
-                
-                <div class="wrap-input100 validate-input bg1 rs1-wrap-input100" data-validate="Vehicle Brand">
-					<span class="label-input100">Vehicle Brand*</span>
-					<input class="input100" type="text" name="brand" placeholder="Brand" required>
+					<input class="input100" type="text" name="variant" placeholder="Variant" required>
                 </div>
                 
                
+                <div class="wrap-input100 validate-input bg1 rs1-wrap-input100" data-validate="Owner">
+					<span class="label-input100">Onwer Name as on Rc*</span>
+					<input class="input100" type="text" name="ownerName" placeholder="Owner Name" required>
+                </div>
 
+                <div class="wrap-input100 validate-input bg1 rs1-wrap-input100">
+						Month/Year of Purchase*
+                <input type="text" id="datepicker" autocomplete="off" required></input>
+                </div>
+                     
 				<div class="wrap-input100 input100-select bg1">
 					<span class="label-input100">Insurance Available *</span>
 					<div>
@@ -179,10 +172,10 @@
 				<!--addition of running in if contains options-->
 
 					<div class="wrap-contact100-form-range">
-						<span class="label-input100">Asking Price *</span>
+						<span class="label-input100">Asking Price Rs*</span>
 
 						<div class="contact100-form-range-value">
-							Rs<span id="value-lower">0</span> - Rs<span id="value-upper">1000000</span>
+							Rs <span id="value-lower">0</span> - Rs <span id="value-upper">1000000</span>
 							<input type="text" name="from-value">
 							<input type="text" name="to-value">
 						</div>
@@ -193,10 +186,10 @@
                     </div>
                     
                     <div class="wrap-contact100-form-range">
-						<span class="label-input100">Running In *</span> 
+						<span class="label-input100">Running Done km*</span> 
 
 						<div class="contact100-form-range-value">
-							<span id="lower-mileage">0</span> - <span id="upper-mileage">100000 km</span>
+							<span id="lower-mileage">0 km</span> - <span id="upper-mileage">100000 km</span>
 							<input type="text" name="lower-value">
 							<input type="text" name="upper-value">
 						</div>
@@ -207,6 +200,11 @@
 					</div>
                 
                 
+				<div class="wrap-input100 validate-input bg1 rs1-wrap-input100" data-validate="Timestamp">
+					<span class="label-input100">Time Stamp*  </span><br>
+					<input type="time" value="08:30" />
+					<input class="input100" type="text" name="timeStamp"  required>
+				</div>
 
 				<div class="wrap-input100 validate-input bg1 " data-validate = "Please Type Your Message">
 					<span class="label-input100">Message</span>
@@ -319,7 +317,14 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 	        $('.contact100-form-range-value input[name="from-value"]').val($('#value-lower').html());
 	        $('.contact100-form-range-value input[name="to-value"]').val($('#value-upper').html());
 	    });
-    </script>
+	</script>
+	<script>
+			$("button").click(function() {
+  var value = $(this).parent().parent().find("input").val();
+  $("#output").html(value + "<br>&lt;time datetime='" + value + "'>&lt;/time>");
+  console.log(value);
+});
+	</script>
 
 <script>
     var filterMileage = document.getElementById('filter-mileage');
