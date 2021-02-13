@@ -148,7 +148,7 @@
                 
                
                 <div class="wrap-input100 validate-input bg1 rs1-wrap-input100" data-validate="Owner">
-					<span class="label-input100">Onwer Name as on Rc*</span>
+					<span class="label-input100">Owner Name as on Rc*</span>
 					<input class="input100" type="text" name="ownerName" placeholder="Owner Name" required>
                 </div>
 
@@ -292,10 +292,10 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 	    var filterBar = document.getElementById('filter-bar');
 
 	    noUiSlider.create(filterBar, {
-	        start: [ 10000, 390000 ],
-	        connect: true,
+	        start: [ 1000 ],
+	        connect: [true,false],
 	        range: {
-	            'min': 10000,
+	            'min': 1000,
 	            'max': 1000000
 	        }
 	    });
@@ -322,10 +322,10 @@ document.getElementById('dtText').innerHTML=today;
     var filterMileage = document.getElementById('filter-mileage');
 
     noUiSlider.create(filterMileage, {
-        start: [ 1000, 30000 ],
-        connect: true,
+        start: [ 1000 ],
+        connect: [true,false],
         range: {
-            'min': 10000,
+            'min': 1000,
             'max': 100000
         }
     });
